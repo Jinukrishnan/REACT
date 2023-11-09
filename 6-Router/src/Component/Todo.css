@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    height: 100vh;
+  
+    font-family: sans-serif;
+    background: linear-gradient(62deg, black, rgb(6, 6, 61), rgb(95, 8, 95), rgb(156, 106, 13));
+    animation: gradient 15s ease infinite; 
+     background-size: 400% 400%;
+}
+@-webkit-keyframes gradient{
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+       background-position: 0% 50%;
+    }
+  }
+  @keyframes gradient{
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+       background-position: 0% 50%;
+    }
+  } 
+.todo-container{
+   
+    width: 350px;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+h1{
+    margin: 0;
+    margin-bottom: 15px;
+    color: #ababab;
+}
+.input-section{
+    background-color: #ececec;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px #3f3f3f;
+}
+.input-section input{
+    border:1px solid rgb(226,226,226) ;
+    border-radius: 5px;
+    width: 100% ;
+    padding: 10px;
+    box-sizing: border-box;
+}
+ul{
+    
+    text-align: left;
+    padding: 0;
+
+}
+
+ul li{
+    list-style: none;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: gray;
+    box-shadow: 0 4px 6px #312b2b;
+   
+}
+i{
+    text-align: right;
+    float: right;
+    cursor: pointer;
+}
+input::placeholder{
+    color: silver;
+    
+}

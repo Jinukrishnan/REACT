@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@600&family=Montserrat:ital,wght@1,500&display=swap');
+
+/* font-family: 'Montserrat', sans-serif; */
+.container{
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+.left span{
+    color: white;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+.right input{
+    margin-right:10px ;
+    width: 150px;
+    padding: 5px 0px;
+    border-radius: 5px;
+    border: none;
+    outline:none;
+   
+}
+.right input::placeholder{
+padding-left:  10px;
+
+}
+.right button{
+    cursor: pointer;
+    border-radius:5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-family: 'Montserrat', sans-serif;  
+}
+
+
+
+
+
+
+
+
+
+
+

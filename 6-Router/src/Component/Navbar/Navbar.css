@@ -1,0 +1,14 @@
+.navbar{
+    background-color: white;
+    margin: 10px;
+    padding: 15PX;
+    border-radius: 5px;
+    box-shadow: 5px 3px 8px rgb(80, 79, 79);
+    text-align: center;
+}
+.navbar a{
+    margin: 0px 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
