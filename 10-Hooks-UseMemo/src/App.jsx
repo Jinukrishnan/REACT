@@ -1,21 +1,18 @@
-import React,{useEffect, useMemo, useState} from 'react'
-
+import { useCallback, useMemo, useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
-import Counter from './Counter';
-
-
+import Child from './Child';
+const myArray=["a","b","c","d"];
 function App() {
-const [count1,setCount1]=useState(0)
-const [count2,setCount2]=useState(0)
-const cnt=useMemo(()=>Counter({data:count1}),[count1])
-console.log("Parent");
+  const [count, setCount] = useState(0);
+  // const myArray=useMemo(()=>{["a","b","c","d"]},[]);
+  const increment=useCallback(()=>{setCount(count+1)},[count ])
   return (
     <>
-      <h1>Parent{count2}</h1>
-     {cnt}
-     {/* <Counter data={count1}/> */}
-      <button onClick={()=>{setCount2(count2+1)}}>ParentCounter</button>
-      <button onClick={()=>{setCount1(count1+1)}}>Child Counter</button>
+    <h1>{count}</h1>
+     <button onClick={increment}>Counter</button>
+      <Child myArray={myArray}/>
     </>
   )
 }
