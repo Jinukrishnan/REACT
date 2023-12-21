@@ -1,28 +1,36 @@
-import { useState,Suspense,lazy } from 'react';
-// import Scomponent from './Scomponent';
+import { useState, Suspense, lazy } from 'react'
+
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+
 import './App.css'
+// import Scomp from './Scomp';
+// import Asd from './asd';
 
 function App() {
-  console.log("App cmp");
-  const [count, setCount] = useState(false);
-
-
-  let Scomponent = lazy(() => setDelay(import("./Scomponent")));
+  console.log("App");
+ let Scomp=lazy(()=>setData(import("./Scomp")))
+ let Asd=lazy(()=>setData(import("./asd")))
 
   return (
     <>
-     <Suspense fallback={<h2>Loading...</h2>}>
-     {count && <Scomponent />}
-     </Suspense>
-     <button onClick={() => setCount(!count)}>show</button>
+
+      <BrowserRouter>
+        <Suspense fallback={<h1>loading...</h1>}>
+          <Routes>
+            <Route path='/' element={<Scomp />} />
+            <Route path='/asd' element={<Asd />} />
+          </Routes>
+        </Suspense>
+
+      </BrowserRouter>
+
     </>
   )
 }
 
-export default App
-
-
-async function setDelay(cmp) {
-  await new Promise(res => setTimeout(res,2000));
-  return cmp;
+async function setData(comp){
+  await new Promise((res)=>setTimeout(res,3000))
+  return comp
 }
+
+export default App
